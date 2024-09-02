@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'media', // Enables dark mode based on user's system preference
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,8 +10,14 @@ module.exports = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      // Optional: You can define custom colors if needed
+      colors: {
+        darkBg: '#000000', // Dark mode background color
+        lightBg: '#ffffff', // Light mode background color
+        darkText: '#ffffff', // Dark mode text color
+        lightText: '#000000', // Light mode text color
       },
     },
   },
